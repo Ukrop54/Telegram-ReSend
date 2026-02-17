@@ -41,7 +41,7 @@ document
          fileInput.files.length > 0 ? "sendDocument" : "sendMessage";
 
       try {
-         const response = await fetch("/netlify/functions/sendmessage", {
+         const response = await fetch("/.netlify/functions/sendmessage", {
             method: "POST",
             body: JSON.stringify({
                chat_id: recipient,
