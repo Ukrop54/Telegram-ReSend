@@ -2,6 +2,16 @@ $("#toggleCheckbox").on("click", function () {
    $("#advanced").slideToggle("slow", function () {});
 });
 
+$("#toggleMembers").on("click", function () {
+   $("#members-panel").slideToggle("slow", function () {});
+});
+
+function selectUser(id) {
+   document.getElementById("recipient-select").value = id;
+   document.getElementById("toggleMembers").checked = false;
+   $("#members-panel").slideToggle("slow", function () {});
+}
+
 function setState(state) {
    $("body").removeClass("success error");
 

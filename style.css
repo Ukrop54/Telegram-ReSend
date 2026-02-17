@@ -92,26 +92,28 @@ body.error::after {
    z-index: 2;
 }
 
-.table-container {
+.members-panel {
+   position: fixed;
+   top: 0%;
+   right: 0%;
+   width: 350px;
+   height: 100vh;
+   padding: 20px;
+
    background: rgba(255, 255, 255, 0.05);
    backdrop-filter: blur(20px);
-   border-radius: 15px;
-   border: 1px solid rgba(255, 255, 255, 0.08);
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   width: 100%;
-   max-height: 70vh;
+   border-left: 1px solid rgba(255, 255, 255, 0.08);
+   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+   transition: right 0.4s ease;
    overflow-y: auto;
+   z-index: 1040;
 }
 
 .table {
    color: rgba(199, 165, 253, 0.753);
 }
 
-.table thead th {
-   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
 .table tbody tr:hover {
-   background: rgba(199, 165, 253, 0.08);
-   transition: 0.3s;
+   background: rgba(199, 165, 253, 0.1);
+   cursor: pointer;
 }
