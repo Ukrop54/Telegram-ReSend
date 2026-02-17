@@ -39,7 +39,6 @@ document
 
       const endpoint =
          fileInput.files.length > 0 ? "sendDocument" : "sendMessage";
-      const url = "/.netlify/functions/sendMessage";
 
       try {
          const response = await fetch("/.netlify/functions/sendMessage", {
