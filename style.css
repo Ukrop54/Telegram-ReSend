@@ -111,10 +111,9 @@ body.error::after {
 
 .tablecl {
    color: rgba(199, 165, 253, 0.753);
-}
-
-.tablecl tbody tr:hover {
-   background: rgba(199, 165, 253, 0.1);
-   cursor: pointer;
-   color: rgba(199, 165, 253, 0.753);
+   tbody tr:hover {
+      background: rgba(199, 165, 253, 0.1);
+      cursor: pointer;
+      color: rgba(199, 165, 253, 0.753);
+   }
 }
