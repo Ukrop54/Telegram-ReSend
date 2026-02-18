@@ -16,6 +16,14 @@ $("#showpv").on("click", function () {
    $("#showpv").toggleClass("bi-chevron-up bi-chevron-down");
 });
 
+$(".custom_icircle").hover(function () {
+   $(this).toggleClass("bi-info-circle bi-info-circle-fill");
+});
+
+$("#actdescdiv").on("click", function () {
+   $("#descdiv").slideToggle("slow", function () {});
+});
+
 function selectUser(id) {
    document.getElementById("recipient-select").value = id;
    document.getElementById("toggleMembers").checked = false;
