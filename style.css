@@ -109,11 +109,12 @@ body.error::after {
    z-index: 1040;
 }
 
-.table {
+.tablecl {
    color: rgba(199, 165, 253, 0.753);
 }
 
-.table tbody tr:hover {
+.tablecl tbody tr:hover {
    background: rgba(199, 165, 253, 0.1);
    cursor: pointer;
+   color: rgba(199, 165, 253, 0.753);
 }

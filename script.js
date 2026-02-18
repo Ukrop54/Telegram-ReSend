@@ -6,6 +6,16 @@ $("#toggleMembers").on("click", function () {
    $("#members-panel").slideToggle("slow", function () {});
 });
 
+$("#showpb").on("click", function () {
+   $("#pbtable").slideToggle("slow", function () {});
+   $("#showpb").toggleClass("bi-chevron-up bi-chevron-down");
+});
+
+$("#showpv").on("click", function () {
+   $("#pvtable").slideToggle("slow", function () {});
+   $("#showpv").toggleClass("bi-chevron-up bi-chevron-down");
+});
+
 function selectUser(id) {
    document.getElementById("recipient-select").value = id;
    document.getElementById("toggleMembers").checked = false;

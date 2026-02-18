@@ -6,6 +6,7 @@
       <title>Telegram ReSend</title>
       <link rel="stylesheet" href="style.css" />
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
       <style>
          .btn-primary {
             border-radius: 10px;
@@ -196,45 +197,55 @@
          </div>
       </div>
       <div id="members-panel" class="members-panel" style="display: none">
-         <h5 class="text-center mb-3">Public list</h5>
+         <h5 class="text-center mb-3">
+            Public list
+            <i class="bi bi-chevron-up" style="position: relative; left: 80px" id="showpb"></i>
+         </h5>
+         <div id="pbtable">
+            <table class="table tablecl tablecl-hover text-center align-middle">
+               <thead>
+                  <tr>
+                     <th>Name</th>
+                     <th>Description</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr onclick="selectUser('1352317933')">
+                     <td>@kapustaa2345</td>
+                     <td>+</td>
+                  </tr>
+                  <tr>
+                     <td onclick="selectUser('9876543210')">person2</td>
+                     <td>987654321</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
 
-         <table class="table table-hover text-center align-middle">
-            <thead>
-               <tr>
-                  <th>Name</th>
-                  <th>Show Details</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr onclick="selectUser('1352317933')">
-                  <td>@kapustaa2345</td>
-                  <td>+</td>
-               </tr>
-               <tr>
-                  <td onclick="selectUser('9876543210')">person2</td>
-                  <td>987654321</td>
-               </tr>
-            </tbody>
-         </table>
-         <h5 class="text-center mb-3">Private list</h5>
-         <table class="table table-hover text-center align-middle">
-            <thead>
-               <tr>
-                  <th>Name</th>
-                  <th>Show Details</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr onclick="selectUser('1352317933')">
-                  <td>@kapustaa2345</td>
-                  <td>+</td>
-               </tr>
-               <tr>
-                  <td onclick="selectUser('9876543210')">person2</td>
-                  <td>987654321</td>
-               </tr>
-            </tbody>
-         </table>
+         <h5 class="text-center mb-3">
+            Private list
+            <i class="bi bi-chevron-up" style="position: relative; left: 80px" id="showpv"></i>
+         </h5>
+         <div id="pvtable">
+            <table class="table tablecl tablecl-hover text-center align-middle">
+               <thead>
+                  <tr>
+                     <th>Name</th>
+                     <th>Description</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr onclick="selectUser('1352317933')">
+                     <td>@kapustaa2345</td>
+                     <td>+</td>
+                  </tr>
+                  <tr>
+                     <td onclick="selectUser('9876543210')">person2</td>
+                     <td>987654321</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
       </div>
 
       <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
