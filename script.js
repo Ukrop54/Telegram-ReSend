@@ -45,10 +45,9 @@ document.getElementById("messageForm").addEventListener("submit", async function
    const NRmessage = document.getElementById("message").value;
 
    // const recipient = document.getElementById("recipient-select").value;
-   recinput = document.getElementById("recipient-select");
-   const recipient = "";
+   const recipient = document.getElementById("recipient-select");
 
-   if (!recinput) {
+   if (!recipient) {
       document.getElementById("response").innerHTML = '<div class="alert alert-danger">Please select a recipient.</div>';
       return;
    }
