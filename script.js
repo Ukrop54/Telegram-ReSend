@@ -51,17 +51,6 @@ document.getElementById("messageForm").addEventListener("submit", async function
    if (!recinput) {
       document.getElementById("response").innerHTML = '<div class="alert alert-danger">Please select a recipient.</div>';
       return;
-   } else {
-      const value = recinput.value.trim();
-
-      if (/^\d{10}$/.test(value)) {
-         recipient == value;
-      } else if (/^[a-zA-Z0-9а-яА-Я]{3,25}$/.test(value)) {
-         console.log("db");
-      } else {
-         document.getElementById("response").innerHTML = '<div class="alert alert-danger">Invalid nickname or chat ID</div>';
-         return;
-      }
    }
 
    const fileInput = document.getElementById("file");
