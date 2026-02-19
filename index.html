@@ -219,18 +219,18 @@
                            >Nickname
                            <i title="Must contain from 3 to 25 characters" class="bi bi-info-circle custom_icircle" style="font-size: small"></i>
                         </label>
-                        <input type="text" class="form-control regCSS" placeholder="GeorgeFloyd1488" />
+                        <input type="text" class="form-control regCSS" id="reg-nickname" placeholder="GeorgeFloyd1488" />
                      </div>
                      <div class="form-group mb-2">
                         <label for="id"
                            >Telegram ID <i title="Run /myid in bot's chat" class="bi bi-info-circle custom_icircle" style="font-size: small"></i
                         ></label>
-                        <input type="number" class="form-control regCSS" placeholder="0000000000" />
+                        <input type="text" class="form-control regCSS" id="reg-chatid" placeholder="0000000000" />
                      </div>
                      <div class="" id="descdiv" style="display: none">
                         <div class="form-group mb-2">
                            <label for="id">Short Description</label>
-                           <input type="text" class="form-control regCSS" placeholder="Something about You..." />
+                           <input type="text" class="form-control regCSS" id="reg-description" placeholder="Something about You..." />
                         </div>
                      </div>
                      <div class="row row-cols-2">
@@ -247,7 +247,7 @@
                            </div>
                         </div>
                         <div class="col">
-                           <input type="checkbox" class="form-check-input checkboxStyle" checked />
+                           <input type="checkbox" class="form-check-input checkboxStyle" id="reg-public" checked />
                            <label for="Public"
                               >Public Nickname
                               <i title="Anyone can view and chose Your Nickname" class="bi bi-info-circle custom_icircle" style="font-size: small"></i

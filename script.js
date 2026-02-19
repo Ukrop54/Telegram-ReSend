@@ -133,3 +133,65 @@ document.getElementById("messageForm").addEventListener("submit", async function
       }, 5000);
    }
 });
+
+async function loadPublicMembers() {
+   const response = await fetch("/.netlify/functions/getPublic");
+   const data = await response.json();
+
+   const tbody = document.querySelector("#pbtable tbody");
+   tbody.innerHTML = "";
+
+   data.forEach((user) => {
+      const row = document.createElement("tr");
+      row.onclick = () => selectUser(user.chat_id);
+
+      row.innerHTML = `
+      <td>${user.nickname}</td>
+      <td>${user.description || "-"}</td>
+    `;
+
+      tbody.appendChild(row);
+   });
+}
+
+document.querySelector(".signup-form").addEventListener("submit", async function (e) {
+   e.preventDefault();
+
+   const nickname = document.getElementById("reg-nickname").value.trim();
+   const chatId = document.getElementById("reg-chatid").value.trim();
+   const description = document.getElementById("reg-description").value.trim();
+   const isPublic = document.getElementById("reg-public").checked;
+
+   const response = await fetch("/.netlify/functions/signup", {
+      method: "POST",
+      headers: {
+         "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+         nickname,
+         chatId,
+         description,
+         isPublic,
+      }),
+   });
+
+   const result = await response.json();
+
+   if (result.success) {
+      alert("Shortcut created!");
+
+      // автоматически вставляем chat_id в поле получателя
+      document.getElementById("recipient-select").value = chatId;
+
+      // закрываем модалку
+      const modal = bootstrap.Modal.getInstance(document.getElementById("RegModal"));
+      modal.hide();
+   } else {
+      alert("Error: " + (result.error?.message || "Something went wrong"));
+      console.error(result);
+   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+   loadPublicMembers();
+});
