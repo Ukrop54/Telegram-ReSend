@@ -1,6 +1,6 @@
 const { createClient } = supabase;
 
-const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseUrl = process.env.SUPABASE_DATABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 const db = createClient(supabaseUrl, supabaseKey);
