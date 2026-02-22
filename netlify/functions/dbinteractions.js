@@ -1,7 +1,8 @@
 const { createClient } = supabase;
 
-const supabaseUrl = process.env.SUPABASE_DATABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabaseUrl = "https://azxoyejifimzkauuuxit.supabase.co";
+const supabaseKey =
+   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF6eG95ZWppZmltemthdXV1eGl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEzMjU0NzEsImV4cCI6MjA4NjkwMTQ3MX0.YK6vGiq9BO88NtlApnuyLz1s3RaMnGF4evzwkaBK8Vo";
 
 const db = createClient(supabaseUrl, supabaseKey);
 
