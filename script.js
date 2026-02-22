@@ -2,6 +2,36 @@ $("#toggleCheckbox").on("click", function () {
    $("#advanced").slideToggle("slow", function () {});
 });
 
+$("#toggleMembers").on("click", function () {
+   $("#members-panel").slideToggle("slow", function () {});
+});
+
+$("#showpb").on("click", function () {
+   $("#pbtable").slideToggle("slow", function () {});
+   $("#showpb").toggleClass("bi-chevron-up bi-chevron-down");
+});
+
+$("#showpv").on("click", function () {
+   $("#pvtable").slideToggle("slow", function () {});
+   $("#showpv").toggleClass("bi-chevron-down bi-chevron-up ");
+});
+
+$(".custom_icircle").hover(function () {
+   $(this).toggleClass("bi-info-circle bi-info-circle-fill");
+});
+
+$("#actdescdiv").on("click", function () {
+   $("#descdiv").slideToggle("slow", function () {});
+});
+
+// window.innerWidth <= 1400 ? (document.getElementById("slist").textContent = "List") : "";
+
+function selectUser(id) {
+   document.getElementById("recipient-select").value = id;
+   document.getElementById("toggleMembers").checked = false;
+   $("#members-panel").slideToggle("slow", function () {});
+}
+
 function setState(state) {
    $("body").removeClass("success error");
 
@@ -15,13 +45,15 @@ document.getElementById("messageForm").addEventListener("submit", async function
 
    const senderName = document.getElementById("sender-name").value;
    const NRmessage = document.getElementById("message").value;
-   const recipient = document.getElementById("recipient-select").value;
-   const fileInput = document.getElementById("file");
+
+   const recipient = document.getElementById("recipient-select").value.trim();
 
    if (!recipient) {
       document.getElementById("response").innerHTML = '<div class="alert alert-danger">Please select a recipient.</div>';
       return;
    }
+
+   const fileInput = document.getElementById("file");
 
    const formData = new FormData();
    formData.append("chat_id", recipient);
@@ -32,7 +64,6 @@ document.getElementById("messageForm").addEventListener("submit", async function
    }
 
    const endpoint = fileInput.files.length > 0 ? "sendDocument" : "sendMessage";
-   const url = "/.netlify/functions/sendMessage";
 
    try {
       const response = await fetch("/.netlify/functions/sendmessage", {

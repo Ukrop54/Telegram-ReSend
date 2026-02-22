@@ -1,8 +1,29 @@
-@media (max-width: 764px) {
-   #basic-addon1 {
-      display: none;
-   }
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
+
+*.google-sans-flex,
+input,
+button,
+textarea,
+tr,
+th,
+td,
+h3,
+h5 {
+   font-family: "Google Sans Flex", sans-serif !important;
+   font-optical-sizing: auto !important;
+   font-weight: 200 !important;
+   font-style: normal !important;
+   font-variation-settings:
+      "slnt" 0,
+      "wdth" 100,
+      "GRAD" 0,
+      "ROND" 0 p !important;
 }
+
+@media (max-width: 1400px) {
+   /*  */
+}
+
 .toggleButton {
    top: 100%;
    left: 100%;
@@ -30,9 +51,7 @@ body::before {
    inset: 0;
    z-index: -2;
 
-   background:
-      radial-gradient(circle at 20% 30%, #1a2a6c 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, #16213e 0%, transparent 50%);
+   background: radial-gradient(circle at 20% 30%, #1a2a6c 0%, transparent 50%), radial-gradient(circle at 80% 70%, #16213e 0%, transparent 50%);
 
    background-size: 300% 300%;
    background-repeat: no-repeat;
@@ -46,9 +65,7 @@ body::after {
    inset: 0;
    z-index: -1;
 
-   background:
-      radial-gradient(circle at 20% 30%, #0a8a26 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, #0a8a26 0%, transparent 50%);
+   background: radial-gradient(circle at 20% 30%, #0a8a26 0%, transparent 50%), radial-gradient(circle at 80% 70%, #0a8a26 0%, transparent 50%);
 
    background-size: 300% 300%;
    background-repeat: no-repeat;
@@ -77,14 +94,47 @@ body::after {
 
 body.success::after {
    opacity: 1;
-   background:
-      radial-gradient(circle at 20% 30%, #0a8a26 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, #0a8a26 0%, transparent 50%);
+   background: radial-gradient(circle at 20% 30%, #0a8a26 0%, transparent 50%), radial-gradient(circle at 80% 70%, #0a8a26 0%, transparent 50%);
 }
 
 body.error::after {
    opacity: 1;
-   background:
-      radial-gradient(circle at 20% 30%, #6c461a 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, #6c461a 0%, transparent 50%);
+   background: radial-gradient(circle at 20% 30%, #6c461a 0%, transparent 50%), radial-gradient(circle at 80% 70%, #6c461a 0%, transparent 50%);
+}
+
+.user_memberlist {
+   right: 2px;
+   bottom: 1px;
+   top: 1px;
+   /* max-width: 100px; */
+   width: 100px;
+   height: 98%;
+   position: absolute;
+   z-index: 2;
+}
+
+.members-panel {
+   position: fixed;
+   top: 0%;
+   right: 0%;
+   width: 350px;
+   height: 100vh;
+   padding: 20px;
+
+   background: rgba(255, 255, 255, 0.05);
+   backdrop-filter: blur(20px);
+   border-left: 1px solid rgba(255, 255, 255, 0.08);
+   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+   transition: right 0.4s ease;
+   overflow-y: auto;
+   z-index: 1040;
+}
+
+.tablecl {
+   color: rgba(199, 165, 253, 0.753);
+   tbody tr:hover {
+      background: rgba(199, 165, 253, 0.1);
+      cursor: pointer;
+      color: rgba(199, 165, 253, 0.753);
+   }
 }
