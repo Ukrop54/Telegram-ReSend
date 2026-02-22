@@ -1,8 +1,29 @@
-@media (max-width: 764px) {
-   #basic-addon1 {
-      display: none;
-   }
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
+
+*.google-sans-flex,
+input,
+button,
+textarea,
+tr,
+th,
+td,
+h3,
+h5 {
+   font-family: "Google Sans Flex", sans-serif !important;
+   font-optical-sizing: auto !important;
+   font-weight: 200 !important;
+   font-style: normal !important;
+   font-variation-settings:
+      "slnt" 0,
+      "wdth" 100,
+      "GRAD" 0,
+      "ROND" 0 p !important;
 }
+
+@media (max-width: 1400px) {
+   /*  */
+}
+
 .toggleButton {
    top: 100%;
    left: 100%;

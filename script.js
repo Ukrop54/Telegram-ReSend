@@ -13,7 +13,7 @@ $("#showpb").on("click", function () {
 
 $("#showpv").on("click", function () {
    $("#pvtable").slideToggle("slow", function () {});
-   $("#showpv").toggleClass("bi-chevron-up bi-chevron-down");
+   $("#showpv").toggleClass("bi-chevron-down bi-chevron-up ");
 });
 
 $(".custom_icircle").hover(function () {
@@ -23,6 +23,8 @@ $(".custom_icircle").hover(function () {
 $("#actdescdiv").on("click", function () {
    $("#descdiv").slideToggle("slow", function () {});
 });
+
+// window.innerWidth <= 1400 ? (document.getElementById("slist").textContent = "List") : "";
 
 function selectUser(id) {
    document.getElementById("recipient-select").value = id;
