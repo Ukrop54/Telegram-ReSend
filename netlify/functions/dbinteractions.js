@@ -53,7 +53,7 @@ regform.addEventListener("submit", (e) => {
    alertBox.className = "";
 
    if (!nameRegex.test(nickname)) {
-      SignDelay("Nickname must be 3-25 letters only", "reg-nickname");
+      SignDelay("Nickname must contain 3-25 letters", "reg-nickname");
       return;
    }
 
@@ -64,7 +64,7 @@ regform.addEventListener("submit", (e) => {
 
    if (descEnabled && description !== "") {
       if (!nameRegex.test(description)) {
-         SignDelay("Description must be 3-25 letters only", "reg-description");
+         SignDelay("Description must contain 3-25 letters", "reg-description");
          return;
       }
    }
